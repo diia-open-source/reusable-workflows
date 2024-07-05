@@ -14,5 +14,5 @@ jobs:
     with:
       pr_number: ${{ inputs.pr_number }}
       publish_branch: $ {{ inputs.publish_branch }}
-    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution.yml
+    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution.yml@main
     secrets: inherit
