@@ -11,5 +11,5 @@ on:
 jobs:
   accept-contribution:
     if: github.event.pull_request.merged == true
-    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution-mirror.yml
+    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution-mirror.yml@main
     secrets: inherit
