@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Number of accepted PR
+        required: true
+      publish_branch:
+        description: Target branch for upstream MR
+        required: false
+        default: 'main'
+
+jobs:
+  accept-contribution:
+    with:
+      pr_number: ${{ inputs.pr_number }}
+      publish_branch: $ {{ inputs.publish_branch }}
+    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution.yml
+    secrets: inherit
