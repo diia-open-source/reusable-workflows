@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    types:
+      - "closed"
+    branches:
+      - "main"
+    paths-ignore:
+      - '.github/**'
+
+
+jobs:
+  accept-contribution:
+    if: github.event.pull_request.merged == true
+    uses: diia-open-source/reusable-workflows/.github/workflows/accept-contribution-mirror.yml
+    secrets: inherit
