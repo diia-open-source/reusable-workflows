@@ -6,6 +6,23 @@ on:
       pr_number:
         description: Number of accepted PR
         required: true
+  workflow_call:
+    inputs:
+      pr_number:
+        type: number
+        description: Number of accepted PR
+        required: true
+    secrets:
+      GITLAB_MAIN_TRIGGER_TOKEN:
+        required: true
+      PUBLISH_GROUP:
+        required: true
+      TARGET_PROJECT:
+        required: true
+      PUBLISH_BRANCH:
+        required: true
+      PROJECT_CI_API:
+        required: true
 
 jobs:
   accept-contribution:
