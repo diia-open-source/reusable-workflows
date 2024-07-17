@@ -9,7 +9,7 @@ on:
   workflow_call:
     inputs:
       pr_number:
-        type: number
+        type: string
         description: Number of accepted PR
         required: true
     secrets:
